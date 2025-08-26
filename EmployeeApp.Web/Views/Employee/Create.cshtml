@@ -9,17 +9,17 @@
     <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
 </head>
 <body style="margin: 2rem;">
-    <h1>Anställda:</h1>
+    <h1>Skapa Användare:</h1>
     <ul>
        <form asp-controller="Employee" asp-action="Create" method="post">
 
            <label asp-for="Name"></label>
-           <span asp-validation-for="Name"></span>
            <input asp-for="Name" style="width: 30rem;">
+            <span asp-validation-for="Name" style="color: darkred;"></span>
 
             <label asp-for="Email"></label>
-            <span asp-validation-for="Email"></span>
             <input asp-for="Email" style="width: 30rem;">
+            <span asp-validation-for="Email" style="color: darkred;"></span>
             <br />
            <button style="width: 8rem;">Lägg till</button>
        </form>

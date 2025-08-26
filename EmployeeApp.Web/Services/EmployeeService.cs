@@ -4,7 +4,11 @@ namespace EmployeeApp.Web.Services;
 
 public class EmployeeService
 {
-    static List<Employee> employees = new List<Employee>();
+    static List<Employee> employees = new List<Employee>(
+        [
+            new Employee{Id = 1, Name = "Christofer H", Email = "Christofer.H@Internet.se"}
+        ]);
+    
 
     public Employee[] GetAll() => employees.OrderBy(x => x.Id).ToArray();
 
