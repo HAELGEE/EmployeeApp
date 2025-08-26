@@ -1,0 +1,33 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@using EmployeeApp.Web.Models
+@model Employee
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alla Anställda</title>
+    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+</head>
+<body style="margin: 2rem;">
+    <h1>Anställda:</h1>
+    <ul>
+       <form asp-controller="Employee" asp-action="Create" method="post">
+
+           <label asp-for="Name"></label>
+           <span asp-validation-for="Name"></span>
+           <input asp-for="Name" style="width: 30rem;">
+
+            <label asp-for="Email"></label>
+            <span asp-validation-for="Email"></span>
+            <input asp-for="Email" style="width: 30rem;">
+            <br />
+           <button style="width: 8rem;">Lägg till</button>
+       </form>
+
+       <br>
+
+        <a asp-controller="Employee" asp-action="index">Bakåt</a>
+
+    </ul>
+</body>
+</html>
